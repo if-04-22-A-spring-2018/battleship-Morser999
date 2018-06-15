@@ -22,7 +22,7 @@
 *** a shot or a guess (pair of row/col) is outside the field the value OutOfRange
 *** is used.
 */
-typedef enum {Water, Boat, Unknown, OutOfRange} CellContent;
+enum CellContent {Water, Boat, Unknown, OutOfRange};
 
 /**
 *** Loads the two files battleship.my and battleship.op which hold the fields
@@ -56,5 +56,7 @@ bool shoot(int row, int col);
 *** is outside the field OutOfRange is returned.
 */
 CellContent get_my_guess(int row, int col);
+
+bool check_if_out_of_range(int row,int col);
 
 #endif
